@@ -1,1 +1,1 @@
-web: node sketch_PONG.app
+web: node foo.js
