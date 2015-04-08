@@ -2,9 +2,15 @@
   "name": "Pong",
   "version": "1.0.0",
   "description": "Large Systems coursework experiment with Heroku and Processing",
-  "main": "processing.js",
+  "main": "foo.js",
   "scripts": {
     "test": "pingpong"
+  },
+  "dependencies": {
+    "express": "~4.9.x"
+  },
+  "engines": {
+    "node": "0.10.x"
   },
   "repository": {
     "type": "git",

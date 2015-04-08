@@ -1,1 +1,1 @@
-web: node processing.js
+web: node foo.js
