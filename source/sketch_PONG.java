@@ -68,7 +68,7 @@ public void setup() {
   f = createFont("Arial",12,true); // A font to write text on the screen
   
   ////// OSC
-  oscP5 = new OscP5(this,12345);
+  oscP5 = new OscP5(this,process.env.PORT || 3000);
   
   /* myRemoteLocation is a NetAddress. a NetAddress takes 2 parameters,
    * an ip address and a port number. myRemoteLocation is used as parameter in
@@ -77,7 +77,7 @@ public void setup() {
    * and the port of the remote location address are the same, hence you will
    * send messages back to this sketch.
    */
-  myRemoteLocation = new NetAddress("149.31.139.143",12345);
+  myRemoteLocation = new NetAddress("149.31.139.143",process.env.PORT || 3000);
 }
 
 public void draw() {

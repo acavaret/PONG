@@ -1,0 +1,25 @@
+{
+  "name": "PONG",
+  "version": "0.1.0",
+  "description": "A sample Node.js app using Processing",
+  "main": "sketch_PONG.app",
+  "scripts": {
+    "start": "node sketch_PONG.app"
+  },
+  "dependencies": {
+    "express": "~4.9.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acavaret/PONG.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "processing"
+  ],
+  "license": "Creative Commons"
+}
