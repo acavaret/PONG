@@ -1,25 +1,19 @@
 {
-  "name": "PONG",
-  "version": "0.1.0",
-  "description": "A sample Node.js app using Processing",
+  "name": "Pong",
+  "version": "1.0.0",
+  "description": "Large Systems coursework experiment with Heroku and Processing",
   "main": "sketch_PONG.app",
   "scripts": {
-    "start": "node sketch_PONG.app"
-  },
-  "dependencies": {
-    "express": "~4.9.x"
-  },
-  "engines": {
-    "node": "0.10.x"
+    "test": "pingpong"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/acavaret/PONG.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "processing"
-  ],
-  "license": "Creative Commons"
+  "author": "acavaret",
+  "license": "Creative Commons",
+  "bugs": {
+    "url": "https://github.com/acavaret/PONG/issues"
+  },
+  "homepage": "https://github.com/acavaret/PONG"
 }
