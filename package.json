@@ -2,7 +2,7 @@
   "name": "Pong",
   "version": "1.0.0",
   "description": "Large Systems coursework experiment with Heroku and Processing",
-  "main": "foo.js",
+  "main": "sketch_PONG.java",
   "scripts": {
     "test": "pingpong"
   },
