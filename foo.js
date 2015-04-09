@@ -6,7 +6,9 @@ var client = redis.createClient();
 
 
 app.get('/', function (req, res) {
-  res.send('Hello ' + client.get("hello"));
+  client.get("Hello", function(err, reply){
+  	res.send('Hello ' + reply);
+  })
 });
 
 var server = app.listen(process.env.PORT || 5000, function () {
