@@ -19,3 +19,10 @@ var server = app.listen(process.env.PORT || 5000, function () {
   console.log('Example app listening at http://%s:%s', host, port);
 
 });
+
+app.get('/', function (req, res) {
+  client.incr("visitors") // increment visitors
+  client.get("visitors", function(err, value) {
+    res.send('Hello visitor number ' + value + '!');
+  });
+});
