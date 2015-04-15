@@ -6,10 +6,9 @@ var redis = require("redis").createClient();
 
 
 app.get('/', function (req, res) {
-  client.incr("visitors") // increment visitors
-  client.get("visitors", function(err, value) {
-    res.send('Hello visitor number ' + value + '!');
-  });
+  client.get("Hello", function(err, reply){
+  	res.send('Hello ' + reply);
+  })
 });
 
 var server = app.listen(process.env.PORT || 6379, function () {
