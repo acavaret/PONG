@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "express": "~4.9.x",
+    "debug": "~0.7.x",
     "redis": "*"
   },
   "engines": {
