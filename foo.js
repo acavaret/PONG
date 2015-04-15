@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 
-var express = require('redis');
-var client = redis.createClient();
+var redis = require("redis").createClient();
 
 
 app.get('/', function (req, res) {
