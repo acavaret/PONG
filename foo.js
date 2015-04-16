@@ -4,11 +4,17 @@ var client = redis.createClient();
 var app = express();
 
 
+app.get('/how-many', function (req, res) {
+   client.llen("visitors", function(err, visitorCount)  {	
+  	res.send("There are " + visitorCount + " visitors");
+	});
+});
 
 
 app.get('/', function (req, res) {
-   client.incr("visitors", function(err, reply) {	
-  	res.send("Hello visitor " + reply);
+   //client.incr("visitors", function(err, reply);
+   client.lpush("visitors", req.ip, function(err, reply)  {	
+  	res.send("Hello visitor number " + reply + " and your IP is " + req.ip);
 	});
 });
 
