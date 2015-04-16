@@ -1,7 +1,17 @@
 var express = require('express');
-var redis = require('redis');
-var client = redis.createClient();
+//var redis = require('redis');
+//var client = redis.createClient();
 var app = express();
+
+if (process.env.REDISTOGO_URL) {
+    var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+	var client = require("redis").createClient(rtg.port, rtg.hostname);
+
+	client.auth(rtg.auth.split(":")[1]);
+	} else {
+    var client = require("redis").createClient();
+}
+
 
 app.get('/most-recent', function (req, res) {
    client.lindex("visitors", 0, function(err, visitorCount)  {	
