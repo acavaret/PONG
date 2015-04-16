@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 	});
 });
 
-app.listen(3000);
+app.listen(3000 || process.env.PORT);
 
 // var server = app.listen(process.env.PORT || 3000, function () {
 
