@@ -3,6 +3,11 @@ var redis = require('redis');
 var client = redis.createClient();
 var app = express();
 
+app.get('/most-recent', function (req, res) {
+   client.lindex("visitors", 0, function(err, visitorCount)  {	
+  	res.send("There are " + visitorCount + " visitors");
+	});
+});
 
 app.get('/how-many', function (req, res) {
    client.llen("visitors", function(err, visitorCount)  {	
